@@ -15,8 +15,8 @@ body{margin:0;min-width:280px;min-height:100vh;min-height:100dvh;overflow-x:hidd
 button{font:inherit;cursor:pointer;-webkit-appearance:none;appearance:none;touch-action:manipulation}
 .app{width:100%;max-width:1200px;margin:0 auto;padding:max(22px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(72px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}
 .hero{display:flex;justify-content:center;align-items:center;gap:clamp(18px,4vw,54px);flex-wrap:wrap;margin:12px 0 26px;padding:20px 0 12px}.brand{display:flex;justify-content:center;align-items:center;flex:0 0 auto}.brandText{display:flex;flex-direction:column;justify-content:center}.siteLogo{width:clamp(260px,27vw,480px);max-width:100%;height:auto;display:block;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(23,32,51,.08));flex-shrink:0}.logo{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,#d7aa3b,#f4d77c);display:grid;place-items:center;font-weight:950;box-shadow:0 10px 28px rgba(183,134,24,.2)}h1{font-size:clamp(2.5rem,7vw,10rem);margin:0;letter-spacing:-.075em;line-height:.82;font-weight:900;color:#1b2b41}.subtitle{margin:.35rem 0 0;color:var(--muted);font-size:clamp(1.5rem,3vw,3.5rem);font-weight:300;letter-spacing:-.045em;font-family:"Segoe UI",sans-serif}.pill{border:1px solid #d9e6e3;background:#f2fbf8;color:#17685f;border-radius:999px;padding:8px 12px;font-weight:850;white-space:nowrap}
-.heroTitleBlock{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:min(42vw,520px)}
-.heroTitle{margin:0;font-size:clamp(4rem,8vw,11rem);line-height:.8;letter-spacing:-.08em;font-weight:900;color:#1b2b41;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.heroTitleBlock{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;width:min(100%,700px);min-width:0}
+.heroTitle{margin:0;font-size:clamp(1.8rem,3.8vw,3.75rem);line-height:.98;letter-spacing:-.045em;font-weight:900;color:#1b2b41;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 .heroSubtitle{margin:0.4rem 0 0;color:#6d7784;font-size:clamp(1.8rem,4vw,4.2rem);line-height:1.02;font-weight:300;letter-spacing:-.05em;font-family:"Segoe UI",sans-serif}
 .shell{background:rgba(255,255,255,.97);border:1px solid #e1e7ee;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}.start{padding:36px 28px 40px;text-align:center}.kicker{color:var(--gold);font-weight:950;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem}.start h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:9px auto 10px;max-width:760px}.start p{color:var(--muted);line-height:1.65;max-width:780px;margin:0 auto 24px}
 .featureGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px auto;max-width:860px}.feature{padding:14px;border:1px solid #dfe6ed;border-radius:14px;background:#fff;color:#344257}.feature strong{color:#172033}
@@ -498,8 +498,8 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
   <div class="brand">
     <img class="siteLogo" src="Dr%20King%20Wunna%20logo.png" alt="Dr King Wunna logo"/>
   </div>
-  <div class="heroTitleBlock" aria-label="AS and A Level chemistry brand heading">
-    <h1 class="heroTitle">AS/A</h1>
+  <div class="heroTitleBlock">
+    <h1 class="heroTitle">Cambridge International AS &amp; A Level Chemistry (9701)</h1>
     <p class="heroSubtitle">Mole calculation</p>
   </div>
 </header>
