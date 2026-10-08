@@ -11,10 +11,13 @@
 
 :root{--bg:#f7f9fc;--panel:#fff;--line:#dce3eb;--text:#172033;--muted:#657386;--gold:#b78618;--gold2:#f0ce72;--teal:#0f8f83;--green:#16865f;--red:#c94c5b;--blue:#2563eb;--shadow:0 24px 70px rgba(23,32,51,.12)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
-body{margin:0;min-width:280px;min-height:100vh;min-height:100dvh;overflow-x:hidden;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 12% 0%,rgba(15,143,131,.08),transparent 26%),radial-gradient(circle at 88% 0%,rgba(183,134,24,.10),transparent 24%),linear-gradient(180deg,#fff 0%,var(--bg) 45%,#f3f6fa 100%);color:var(--text);-webkit-font-smoothing:antialiased}
+body{margin:0;min-width:280px;min-height:100vh;min-height:100dvh;overflow-x:hidden;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f0f2f0;color:var(--text);-webkit-font-smoothing:antialiased}
 button{font:inherit;cursor:pointer;-webkit-appearance:none;appearance:none;touch-action:manipulation}
-.app{width:100%;max-width:1040px;margin:0 auto;padding:max(20px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(72px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
-.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:20px}.brand{display:flex;gap:18px;align-items:center}.brandText{display:flex;flex-direction:column;justify-content:center}.siteLogo{width:110px;height:110px;display:block;filter:drop-shadow(0 10px 18px rgba(23,32,51,.08));flex-shrink:0}.logo{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,#d7aa3b,#f4d77c);display:grid;place-items:center;font-weight:950;box-shadow:0 10px 28px rgba(183,134,24,.2)}h1{font-size:clamp(1.45rem,3vw,2.25rem);margin:0;letter-spacing:-.035em}.subtitle{margin:.35rem 0 0;color:var(--muted)}.pill{border:1px solid #d9e6e3;background:#f2fbf8;color:#17685f;border-radius:999px;padding:8px 12px;font-weight:850;white-space:nowrap}
+.app{width:100%;max-width:1200px;margin:0 auto;padding:max(22px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(72px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}
+.hero{display:flex;justify-content:center;align-items:center;gap:clamp(18px,4vw,54px);flex-wrap:wrap;margin:12px 0 26px;padding:20px 0 12px}.brand{display:flex;justify-content:center;align-items:center;flex:0 0 auto}.brandText{display:flex;flex-direction:column;justify-content:center}.siteLogo{width:clamp(260px,27vw,480px);max-width:100%;height:auto;display:block;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(23,32,51,.08));flex-shrink:0}.logo{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,#d7aa3b,#f4d77c);display:grid;place-items:center;font-weight:950;box-shadow:0 10px 28px rgba(183,134,24,.2)}h1{font-size:clamp(2.5rem,7vw,10rem);margin:0;letter-spacing:-.075em;line-height:.82;font-weight:900;color:#1b2b41}.subtitle{margin:.35rem 0 0;color:var(--muted);font-size:clamp(1.5rem,3vw,3.5rem);font-weight:300;letter-spacing:-.045em;font-family:"Segoe UI",sans-serif}.pill{border:1px solid #d9e6e3;background:#f2fbf8;color:#17685f;border-radius:999px;padding:8px 12px;font-weight:850;white-space:nowrap}
+.heroTitleBlock{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:min(42vw,520px)}
+.heroTitle{margin:0;font-size:clamp(4rem,8vw,11rem);line-height:.8;letter-spacing:-.08em;font-weight:900;color:#1b2b41;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.heroSubtitle{margin:0.4rem 0 0;color:#6d7784;font-size:clamp(1.8rem,4vw,4.2rem);line-height:1.02;font-weight:300;letter-spacing:-.05em;font-family:"Segoe UI",sans-serif}
 .shell{background:rgba(255,255,255,.97);border:1px solid #e1e7ee;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}.start{padding:36px 28px 40px;text-align:center}.kicker{color:var(--gold);font-weight:950;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem}.start h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:9px auto 10px;max-width:760px}.start p{color:var(--muted);line-height:1.65;max-width:780px;margin:0 auto 24px}
 .featureGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px auto;max-width:860px}.feature{padding:14px;border:1px solid #dfe6ed;border-radius:14px;background:#fff;color:#344257}.feature strong{color:#172033}
 .nameEntry{display:grid;gap:8px;max-width:420px;margin:0 auto 20px;text-align:left}.nameEntry label{font-weight:850;color:#344257}.nameEntry input{width:100%;min-height:50px;padding:12px 14px;border:1px solid #cfd9e4;border-radius:12px;font:inherit;color:var(--text);background:#fff}.nameEntry input:focus-visible{outline:3px solid rgba(37,99,235,.32);outline-offset:2px}
@@ -494,12 +497,11 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
 <header class="hero">
   <div class="brand">
     <img class="siteLogo" src="Dr%20King%20Wunna%20logo.png" alt="Dr King Wunna logo"/>
-    <div class="brandText">
-      <h1>AS/A Level Chemistry Challenge</h1>
-      <p class="subtitle">Mole calculations • hydrated / anhydrous crystal formulae • practical error analysis</p>
-    </div>
   </div>
-  <div class="pill">Dr King Wunna • Chemistry</div>
+  <div class="heroTitleBlock" aria-label="AS and A Level chemistry brand heading">
+    <h1 class="heroTitle">AS/A</h1>
+    <p class="heroSubtitle">Mole calculation</p>
+  </div>
 </header>
 
 <section aria-live="polite" class="shell">
@@ -511,11 +513,7 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
       <label for="playerName">What should we call you?</label>
       <input autocomplete="given-name" id="playerName" maxlength="40" placeholder="Enter your name" type="text"/>
     </div>
-    <div class="nameEntry" style="margin-top:8px">
-      <label for="resultEndpoint">Shared results URL (optional)</label>
-      <input autocomplete="off" id="resultEndpoint" maxlength="500" placeholder="Paste Google Apps Script web app URL here" type="url"/>
-      <div class="typeNote">Leave blank to keep results local. Add a Google Apps Script web app URL to send scores to one shared sheet.</div>
-    </div>
+    <input id="resultEndpoint" type="hidden" value=""/>
     <div class="featureGrid">
       <div class="feature"><strong>50</strong><br/>questions</div>
       <div class="feature"><strong>25 + 25</strong><br/>MCQ + typed</div>
@@ -873,6 +871,10 @@ function finish(){
   $('weakStat').textContent=weak?weak[0]:'—';
   $('resultMessage').textContent=pct>=90?`${player}, outstanding mastery of these calculations!`:pct>=75?`${player}, strong work — review the missed topics and go again.`:pct>=60?`${player}, good progress — use the topic tracker for targeted revision.`:`${player}, this set is intentionally difficult. Review the explanations, then retry.`;
   buildResultNavigator();buildMissedTopics();buildTopics(stats);buildReview();buildKey();$('reviewBtn').disabled=score===total;
+  const endpoint=getResultEndpoint();
+  if(endpoint){
+    saveResultToSharedAndLocal({silent:true});
+  }
   $('resultsView').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function buildResultNavigator(){
@@ -913,12 +915,14 @@ function buildKey(){
 
 const RESULT_STORAGE_KEY='aschemistryCandidateResults';
 function getResultEndpoint(){
-  const endpoint=(document.getElementById('resultEndpoint')?.value || '').trim();
-  return endpoint;
+  const params=new URLSearchParams(window.location.search);
+  const urlEndpoint=params.get('sheet') || params.get('endpoint') || '';
+  const inputEndpoint=(document.getElementById('resultEndpoint')?.value || '').trim();
+  return (urlEndpoint || inputEndpoint).trim();
 }
 function populateResultEndpointFromUrl(){
   const params=new URLSearchParams(window.location.search);
-  const endpoint=params.get('sheet');
+  const endpoint=params.get('sheet') || params.get('endpoint');
   if(endpoint && document.getElementById('resultEndpoint')){
     document.getElementById('resultEndpoint').value=endpoint;
   }
@@ -979,20 +983,20 @@ function showSaveNotice(message){
   setTimeout(()=>n.classList.add('hidden'), 4000);
 }
 
-async function saveResultToSharedAndLocal(){
+async function saveResultToSharedAndLocal({ silent=false }={}){
   const record=collectCurrentCandidate();
   const endpoint=getResultEndpoint();
   if(endpoint){
     try{
       await sendResultToEndpoint(record, endpoint);
-      showSaveNotice(`Saved result for ${record.candidate}: ${record.percentage}% and sent to the shared sheet.`);
+      if(!silent){showSaveNotice(`Saved result for ${record.candidate}: ${record.percentage}% and sent to the shared sheet.`);}
       return;
     }catch(err){
-      showSaveNotice(`Saved locally for ${record.candidate}: ${record.percentage}%. Shared send failed: ${err.message}`);
+      if(!silent){showSaveNotice(`Saved locally for ${record.candidate}: ${record.percentage}%. Shared send failed: ${err.message}`);}
       return;
     }
   }
-  showSaveNotice(`Saved locally for ${record.candidate}: ${record.percentage}%`);
+  if(!silent){showSaveNotice(`Saved locally for ${record.candidate}: ${record.percentage}%`);}
 }
 
 function downloadCandidateCsv(){
@@ -1013,8 +1017,9 @@ function downloadCandidateCsv(){
   showSaveNotice(`Downloaded ${rows.length} saved result(s).`);
 }
 
-$('saveResultBtn').onclick=saveResultToSharedAndLocal;
+$('saveResultBtn').onclick=()=>saveResultToSharedAndLocal();
 $('downloadCsvBtn').onclick=downloadCandidateCsv;
+populateResultEndpointFromUrl();
 
 $('startBtn').onclick=startNew;$('nextBtn').onclick=next;$('hintBtn').onclick=showHint;$('skipBtn').onclick=skip;
 $('timerSideShow').onclick=()=>setTimerPanel(true);$('timerSideHide').onclick=()=>setTimerPanel(false);
