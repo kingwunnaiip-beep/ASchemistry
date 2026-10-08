@@ -14,7 +14,7 @@
 body{margin:0;min-width:280px;min-height:100vh;min-height:100dvh;overflow-x:hidden;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 12% 0%,rgba(15,143,131,.08),transparent 26%),radial-gradient(circle at 88% 0%,rgba(183,134,24,.10),transparent 24%),linear-gradient(180deg,#fff 0%,var(--bg) 45%,#f3f6fa 100%);color:var(--text);-webkit-font-smoothing:antialiased}
 button{font:inherit;cursor:pointer;-webkit-appearance:none;appearance:none;touch-action:manipulation}
 .app{width:100%;max-width:1040px;margin:0 auto;padding:max(20px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(72px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
-.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:20px}.brand{display:flex;gap:14px;align-items:center}.logo{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,#d7aa3b,#f4d77c);display:grid;place-items:center;font-weight:950;box-shadow:0 10px 28px rgba(183,134,24,.2)}h1{font-size:clamp(1.45rem,3vw,2.25rem);margin:0;letter-spacing:-.035em}.subtitle{margin:.35rem 0 0;color:var(--muted)}.pill{border:1px solid #d9e6e3;background:#f2fbf8;color:#17685f;border-radius:999px;padding:8px 12px;font-weight:850;white-space:nowrap}
+.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:20px}.brand{display:flex;gap:18px;align-items:center}.brandText{display:flex;flex-direction:column;justify-content:center}.siteLogo{width:110px;height:110px;display:block;filter:drop-shadow(0 10px 18px rgba(23,32,51,.08));flex-shrink:0}.logo{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,#d7aa3b,#f4d77c);display:grid;place-items:center;font-weight:950;box-shadow:0 10px 28px rgba(183,134,24,.2)}h1{font-size:clamp(1.45rem,3vw,2.25rem);margin:0;letter-spacing:-.035em}.subtitle{margin:.35rem 0 0;color:var(--muted)}.pill{border:1px solid #d9e6e3;background:#f2fbf8;color:#17685f;border-radius:999px;padding:8px 12px;font-weight:850;white-space:nowrap}
 .shell{background:rgba(255,255,255,.97);border:1px solid #e1e7ee;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}.start{padding:36px 28px 40px;text-align:center}.kicker{color:var(--gold);font-weight:950;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem}.start h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:9px auto 10px;max-width:760px}.start p{color:var(--muted);line-height:1.65;max-width:780px;margin:0 auto 24px}
 .featureGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px auto;max-width:860px}.feature{padding:14px;border:1px solid #dfe6ed;border-radius:14px;background:#fff;color:#344257}.feature strong{color:#172033}
 .nameEntry{display:grid;gap:8px;max-width:420px;margin:0 auto 20px;text-align:left}.nameEntry label{font-weight:850;color:#344257}.nameEntry input{width:100%;min-height:50px;padding:12px 14px;border:1px solid #cfd9e4;border-radius:12px;font:inherit;color:var(--text);background:#fff}.nameEntry input:focus-visible{outline:3px solid rgba(37,99,235,.32);outline-offset:2px}
@@ -493,13 +493,13 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
 <main class="app">
 <header class="hero">
   <div class="brand">
-    <div class="logo" style="font-size:12px">9701</div>
-    <div>
+    <img class="siteLogo" src="logo.svg" alt="Dr King Wunna logo"/>
+    <div class="brandText">
       <h1>AS/A Level Chemistry Challenge</h1>
       <p class="subtitle">Mole calculations • hydrated / anhydrous crystal formulae • practical error analysis</p>
     </div>
   </div>
-  <div class="pill">Calculation • Offline</div>
+  <div class="pill">Dr King Wunna • Chemistry</div>
 </header>
 
 <section aria-live="polite" class="shell">
@@ -510,6 +510,11 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
     <div class="nameEntry">
       <label for="playerName">What should we call you?</label>
       <input autocomplete="given-name" id="playerName" maxlength="40" placeholder="Enter your name" type="text"/>
+    </div>
+    <div class="nameEntry" style="margin-top:8px">
+      <label for="resultEndpoint">Shared results URL (optional)</label>
+      <input autocomplete="off" id="resultEndpoint" maxlength="500" placeholder="Paste Google Apps Script web app URL here" type="url"/>
+      <div class="typeNote">Leave blank to keep results local. Add a Google Apps Script web app URL to send scores to one shared sheet.</div>
     </div>
     <div class="featureGrid">
       <div class="feature"><strong>50</strong><br/>questions</div>
@@ -581,11 +586,14 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
     </div>
 
     <div class="resultActions">
+      <button class="btn btnSecondary" id="saveResultBtn" type="button">Collect Result</button>
+      <button class="btn btnGhost" id="downloadCsvBtn" type="button">Download CSV</button>
       <button class="btn btnSecondary" id="reviewBtn" type="button">Review Missed</button>
       <button class="btn btnGhost" id="keyBtn" type="button">Show Answer Key</button>
       <button class="btn btnTeal" id="newBtn" type="button">New Shuffled Run</button>
       <button class="btn btnPrimary" id="restartBtn" type="button">Retry Same 50</button>
     </div>
+    <p class="resultSub hidden" id="saveNotice" aria-live="polite"></p>
 
     <h3 class="sectionTitle">Weak Topic Tracker</h3>
     <div class="topicGrid" id="topicGrid"></div>
@@ -902,6 +910,111 @@ function buildKey(){
   const body=$('keyBody');body.innerHTML='';
   questions.forEach((q,i)=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${i+1}</td><td>${q.type==='mcq'?'MCQ':'Typed'}</td><td>${esc(q.category)}</td><td><strong>${fmt(answerDisplay(q))}</strong></td><td>${fmt(q.explanation)}</td>`;body.appendChild(tr);});
 }
+
+const RESULT_STORAGE_KEY='aschemistryCandidateResults';
+function getResultEndpoint(){
+  const endpoint=(document.getElementById('resultEndpoint')?.value || '').trim();
+  return endpoint;
+}
+function populateResultEndpointFromUrl(){
+  const params=new URLSearchParams(window.location.search);
+  const endpoint=params.get('sheet');
+  if(endpoint && document.getElementById('resultEndpoint')){
+    document.getElementById('resultEndpoint').value=endpoint;
+  }
+}
+async function sendResultToEndpoint(record, endpoint){
+  const response=await fetch(endpoint, {
+    method:'POST',
+    mode:'cors',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({
+      candidate: record.candidate,
+      date: record.date,
+      score: record.score,
+      total: record.total,
+      percentage: record.percentage,
+      bestStreak: record.bestStreak,
+      missedTopics: record.missedTopics,
+      responses: record.responses
+    })
+  });
+  if(!response.ok){
+    throw new Error(`HTTP ${response.status}`);
+  }
+  return response;
+}
+function collectCurrentCandidate(){
+  const record={
+    candidate: (player||'Chemist').trim() || 'Chemist',
+    date: new Date().toISOString(),
+    score: scoreNow(),
+    total: questions.length,
+    percentage: Math.round((scoreNow()/questions.length)*100),
+    bestStreak: bestStreak,
+    missedTopics: Object.entries(categoryStats()).filter(([_,info])=>info.right < info.total).map(([name,info])=>({name, missed: info.total - info.right, total: info.total})),
+    responses: responses.map((r,i)=>({
+      question: i + 1,
+      category: questions[i].category,
+      type: questions[i].type,
+      answered: !!r,
+      correct: !!(r && r.isCorrect),
+      skipped: !!(r && r.skipped),
+      timeout: !!(r && r.timeout),
+      selected: r ? r.selected ?? null : null,
+      userText: r ? r.userText ?? '' : '',
+      key: answerDisplay(questions[i])
+    }))
+  };
+  const existing=JSON.parse(localStorage.getItem(RESULT_STORAGE_KEY) || '[]');
+  existing.push(record);
+  localStorage.setItem(RESULT_STORAGE_KEY, JSON.stringify(existing));
+  return record;
+}
+
+function showSaveNotice(message){
+  const n=$('saveNotice');
+  n.textContent=message;
+  n.classList.remove('hidden');
+  setTimeout(()=>n.classList.add('hidden'), 4000);
+}
+
+async function saveResultToSharedAndLocal(){
+  const record=collectCurrentCandidate();
+  const endpoint=getResultEndpoint();
+  if(endpoint){
+    try{
+      await sendResultToEndpoint(record, endpoint);
+      showSaveNotice(`Saved result for ${record.candidate}: ${record.percentage}% and sent to the shared sheet.`);
+      return;
+    }catch(err){
+      showSaveNotice(`Saved locally for ${record.candidate}: ${record.percentage}%. Shared send failed: ${err.message}`);
+      return;
+    }
+  }
+  showSaveNotice(`Saved locally for ${record.candidate}: ${record.percentage}%`);
+}
+
+function downloadCandidateCsv(){
+  const rows=JSON.parse(localStorage.getItem(RESULT_STORAGE_KEY) || '[]');
+  if(!rows.length){showSaveNotice('No candidate results have been collected yet.');return;}
+  const headers=['candidate','date','score','total','percentage','bestStreak'];
+  const csv=[headers.join(',')].concat(rows.map(r=>[
+    `"${String(r.candidate).replace(/"/g,'""')}"`,
+    `"${r.date}"`,
+    r.score,
+    r.total,
+    r.percentage,
+    r.bestStreak
+  ].join(','))).join('\n');
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='candidate-results.csv';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+  showSaveNotice(`Downloaded ${rows.length} saved result(s).`);
+}
+
+$('saveResultBtn').onclick=saveResultToSharedAndLocal;
+$('downloadCsvBtn').onclick=downloadCandidateCsv;
 
 $('startBtn').onclick=startNew;$('nextBtn').onclick=next;$('hintBtn').onclick=showHint;$('skipBtn').onclick=skip;
 $('timerSideShow').onclick=()=>setTimerPanel(true);$('timerSideHide').onclick=()=>setTimerPanel(false);

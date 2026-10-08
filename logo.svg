@@ -1,0 +1,55 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="120" y1="90" x2="470" y2="490" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0D086"/>
+      <stop offset="0.5" stop-color="#C89B2E"/>
+      <stop offset="1" stop-color="#F4D98A"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="147" y1="77" x2="385" y2="479" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#132F5E"/>
+      <stop offset="1" stop-color="#0C1D3B"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="300" cy="300" r="270" fill="#F6F7F5" stroke="url(#gold)" stroke-width="18"/>
+  <circle cx="300" cy="300" r="246" fill="#F6F7F5" stroke="#102C4E" stroke-width="10"/>
+
+  <path d="M145 220C180 184 213 170 250 170C296 170 335 190 377 170C406 156 430 155 455 170L455 210C430 198 406 196 381 209C343 229 307 230 250 228C210 226 183 238 145 262V220Z" fill="url(#gold)" opacity="0.9"/>
+
+  <path d="M170 278L232 214H248L302 268L355 214H373L430 278L430 307C411 299 395 296 367 295C338 294 326 302 302 324C280 302 266 295 240 295C211 295 191 300 170 307V278Z" fill="url(#navy)"/>
+
+  <path d="M209 255C214 194 251 154 300 154C349 154 387 194 391 255H350C346 220 328 195 300 195C272 195 255 221 250 255H209Z" fill="url(#navy)"/>
+
+  <path d="M134 330C162 325 192 338 220 360C246 380 261 409 271 445C234 447 199 438 169 424C138 410 113 387 94 356L134 330Z" fill="url(#navy)"/>
+  <path d="M466 330C439 325 410 338 382 360C356 380 339 409 330 445C366 447 401 438 431 424C462 410 487 387 506 356L466 330Z" fill="url(#navy)"/>
+
+  <path d="M183 355C235 322 265 315 300 315C335 315 364 322 417 355C377 409 355 448 300 448C245 448 221 410 183 355Z" fill="url(#navy)"/>
+
+  <path d="M154 416C186 401 218 395 254 394C278 394 293 403 300 414C307 403 322 394 346 394C382 395 414 401 446 416C431 456 410 485 387 503C355 521 325 529 300 529C274 529 244 521 212 503C189 485 168 456 154 416Z" fill="url(#navy)"/>
+
+  <path d="M198 248C198 243 202 239 207 239H247C251 239 255 242 255 248V252C255 257 251 261 247 261H207C202 261 198 257 198 252V248Z" fill="url(#gold)" opacity="0.8"/>
+  <path d="M345 239H385C391 239 396 243 396 248V252C396 257 391 261 385 261H345C340 261 336 257 336 252V248C336 243 340 239 345 239Z" fill="url(#gold)" opacity="0.8"/>
+
+  <path d="M247 170L300 125L353 170" stroke="url(#gold)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M185 170L118 228" stroke="url(#gold)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M415 170L482 228" stroke="url(#gold)" stroke-width="11" stroke-linecap="round"/>
+
+  <path d="M170 244C215 268 244 280 300 280C356 280 386 268 430 244" stroke="url(#gold)" stroke-width="12" stroke-linecap="round"/>
+
+  <path d="M130 454C171 437 206 430 239 430C264 430 285 438 300 452C315 438 336 430 361 430C394 430 429 437 470 454" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+
+  <text x="300" y="358" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="115" font-weight="700" fill="#102C4E" letter-spacing="-6">KW</text>
+  <text x="300" y="425" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="700" fill="#102C4E">Dr King Wunna</text>
+
+  <path d="M152 474H448" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M140 405C162 414 173 434 177 452" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M460 405C438 414 427 434 423 452" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+
+  <g opacity="0.9">
+    <path d="M196 502L220 476L244 502" stroke="#102C4E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M206 502V526H234V502" stroke="#102C4E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M290 476V526M270 488H310" stroke="#102C4E" stroke-width="4" stroke-linecap="round"/>
+    <path d="M344 478C356 488 362 494 362 504C362 516 354 524 342 524C330 524 322 516 322 504C322 495 328 487 340 480L344 478ZM358 478L370 524" stroke="#102C4E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M396 526V476H420C434 476 442 484 442 496C442 509 434 516 420 516H408V526M408 500H418C423 500 426 498 426 494C426 490 422 488 417 488H408V500Z" stroke="#102C4E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
