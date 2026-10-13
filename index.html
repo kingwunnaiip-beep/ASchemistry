@@ -11,16 +11,14 @@
 
 :root{--bg:#f7f9fc;--panel:#fff;--line:#dce3eb;--text:#172033;--muted:#657386;--gold:#b78618;--gold2:#f0ce72;--teal:#0f8f83;--green:#16865f;--red:#c94c5b;--blue:#2563eb;--shadow:0 24px 70px rgba(23,32,51,.12)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
-body{margin:0;min-width:280px;min-height:100vh;min-height:100dvh;overflow-x:hidden;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f0f2f0;color:var(--text);-webkit-font-smoothing:antialiased}
+body{margin:0;min-width:280px;min-height:100vh;min-height:100dvh;overflow-x:hidden;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 12% 0%,rgba(15,143,131,.08),transparent 26%),radial-gradient(circle at 88% 0%,rgba(183,134,24,.10),transparent 24%),linear-gradient(180deg,#fff 0%,var(--bg) 45%,#f3f6fa 100%);color:var(--text);-webkit-font-smoothing:antialiased}
 button{font:inherit;cursor:pointer;-webkit-appearance:none;appearance:none;touch-action:manipulation}
-.app{width:100%;max-width:1200px;margin:0 auto;padding:max(22px,env(safe-area-inset-top)) max(18px,env(safe-area-inset-right)) max(72px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left))}
-.hero{display:flex;justify-content:center;align-items:center;gap:clamp(18px,4vw,54px);flex-wrap:wrap;margin:12px 0 26px;padding:20px 0 12px}.brand{display:flex;justify-content:center;align-items:center;flex:0 0 auto}.brandText{display:flex;flex-direction:column;justify-content:center}.siteLogo{width:clamp(260px,27vw,480px);max-width:100%;height:auto;display:block;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(23,32,51,.08));flex-shrink:0}.logo{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,#d7aa3b,#f4d77c);display:grid;place-items:center;font-weight:950;box-shadow:0 10px 28px rgba(183,134,24,.2)}h1{font-size:clamp(2.5rem,7vw,10rem);margin:0;letter-spacing:-.075em;line-height:.82;font-weight:900;color:#1b2b41}.subtitle{margin:.35rem 0 0;color:var(--muted);font-size:clamp(1.5rem,3vw,3.5rem);font-weight:300;letter-spacing:-.045em;font-family:"Segoe UI",sans-serif}.pill{border:1px solid #d9e6e3;background:#f2fbf8;color:#17685f;border-radius:999px;padding:8px 12px;font-weight:850;white-space:nowrap}
-.heroTitleBlock{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;width:min(100%,700px);min-width:0}
-.heroTitle{margin:0;font-size:clamp(1.8rem,3.8vw,3.75rem);line-height:.98;letter-spacing:-.045em;font-weight:900;color:#1b2b41;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-.heroSubtitle{margin:0.4rem 0 0;color:#6d7784;font-size:clamp(1.8rem,4vw,4.2rem);line-height:1.02;font-weight:300;letter-spacing:-.05em;font-family:"Segoe UI",sans-serif}
+.app{width:100%;max-width:1040px;margin:0 auto;padding:max(20px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(72px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
+.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:20px}.brand{display:flex;gap:14px;align-items:center}.logo{width:50px;height:50px;border-radius:15px;background:linear-gradient(145deg,#d7aa3b,#f4d77c);display:grid;place-items:center;font-weight:950;box-shadow:0 10px 28px rgba(183,134,24,.2)}h1{font-size:clamp(1.45rem,3vw,2.25rem);margin:0;letter-spacing:-.035em}.subtitle{margin:.35rem 0 0;color:var(--muted)}.pill{border:1px solid #d9e6e3;background:#f2fbf8;color:#17685f;border-radius:999px;padding:8px 12px;font-weight:850;white-space:nowrap}
 .shell{background:rgba(255,255,255,.97);border:1px solid #e1e7ee;border-radius:28px;box-shadow:var(--shadow);overflow:hidden;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}.start{padding:36px 28px 40px;text-align:center}.kicker{color:var(--gold);font-weight:950;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem}.start h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:9px auto 10px;max-width:760px}.start p{color:var(--muted);line-height:1.65;max-width:780px;margin:0 auto 24px}
 .featureGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px auto;max-width:860px}.feature{padding:14px;border:1px solid #dfe6ed;border-radius:14px;background:#fff;color:#344257}.feature strong{color:#172033}
 .nameEntry{display:grid;gap:8px;max-width:420px;margin:0 auto 20px;text-align:left}.nameEntry label{font-weight:850;color:#344257}.nameEntry input{width:100%;min-height:50px;padding:12px 14px;border:1px solid #cfd9e4;border-radius:12px;font:inherit;color:var(--text);background:#fff}.nameEntry input:focus-visible{outline:3px solid rgba(37,99,235,.32);outline-offset:2px}
+.timerOption{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto 20px;color:#344257;font-weight:850}.timerOption input{width:20px;height:20px;accent-color:#0f8f83}
 .btn{border:0;border-radius:13px;padding:13px 18px;min-height:50px;font-weight:900;transition:.15s ease}.btnPrimary{background:linear-gradient(135deg,#d4a437,#f0ce72);color:#172033;box-shadow:0 8px 22px rgba(183,134,24,.18)}.btnSecondary{background:#eef4f7;color:#173d3a;border:1px solid #cfe0df}.btnGhost{background:#fff;color:#30455f;border:1px solid #cfd9e4}.btnTeal{background:linear-gradient(135deg,#0f8f83,#2db6a6);color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}
 .topbar{padding:19px 23px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#fbfcfe)}.meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px;flex-wrap:wrap}.counter{font-weight:900}.catwrap{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.category{color:var(--teal);font-weight:950}.diff{font-size:.8rem;font-weight:900;border-radius:999px;padding:4px 8px;background:#f1f5f9;color:#475569}.progressTrack{height:9px;background:#edf1f5;border-radius:99px;overflow:hidden;border:1px solid #e1e7ed}.progress{height:100%;width:2%;background:linear-gradient(90deg,var(--teal),#d3a93f);transition:width .3s ease}
 .content{padding:28px}.questionNo{color:var(--gold);font-size:.88rem;font-weight:950;text-transform:uppercase;letter-spacing:.12em}.question{font-size:clamp(1.28rem,2.5vw,1.72rem);line-height:1.45;margin:9px 0 18px;font-weight:850;letter-spacing:-.02em}.diagram{border:1px solid #e0e6ed;border-radius:18px;background:#fbfcfe;padding:8px;margin:0 0 19px;overflow:hidden}.diagram svg{display:block;width:100%;height:auto;max-height:330px}.miniTableWrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.miniTable{border-collapse:collapse;width:100%;min-width:420px;background:#fff}.miniTable th,.miniTable td{padding:10px 12px;border:1px solid #dfe6ed;text-align:center}.miniTable th{background:#fffaf0;color:#8e6814}
@@ -496,12 +494,13 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
 <main class="app">
 <header class="hero">
   <div class="brand">
-    <img class="siteLogo" src="Dr%20King%20Wunna%20logo.png" alt="Dr King Wunna logo"/>
+    <div class="logo" style="font-size:12px">9701</div>
+    <div>
+      <h1>AS/A Level Chemistry Challenge</h1>
+      <p class="subtitle">Mole calculations • hydrated / anhydrous crystal formulae • practical error analysis</p>
+    </div>
   </div>
-  <div class="heroTitleBlock">
-    <h1 class="heroTitle">Cambridge International AS &amp; A Level Chemistry (9701)</h1>
-    <p class="heroSubtitle">Mole calculation</p>
-  </div>
+  <div class="pill">Calculation • Offline</div>
 </header>
 
 <section aria-live="polite" class="shell">
@@ -513,7 +512,7 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
       <label for="playerName">What should we call you?</label>
       <input autocomplete="given-name" id="playerName" maxlength="40" placeholder="Enter your name" type="text"/>
     </div>
-    <input id="resultEndpoint" type="hidden" value=""/>
+    <label class="timerOption" for="timerEnabled"><input checked id="timerEnabled" type="checkbox"/>Use a 3-minute timer for each question</label>
     <div class="featureGrid">
       <div class="feature"><strong>50</strong><br/>questions</div>
       <div class="feature"><strong>25 + 25</strong><br/>MCQ + typed</div>
@@ -584,14 +583,11 @@ body.wrong-buzz .app,body.wrong-buzz .sideControls{animation:wrongBuzz .5s linea
     </div>
 
     <div class="resultActions">
-      <button class="btn btnSecondary" id="saveResultBtn" type="button">Collect Result</button>
-      <button class="btn btnGhost" id="downloadCsvBtn" type="button">Download CSV</button>
       <button class="btn btnSecondary" id="reviewBtn" type="button">Review Missed</button>
       <button class="btn btnGhost" id="keyBtn" type="button">Show Answer Key</button>
-      <button class="btn btnTeal" id="newBtn" type="button">New Shuffled Run</button>
+      <button class="btn btnTeal" id="newBtn" type="button">New Run</button>
       <button class="btn btnPrimary" id="restartBtn" type="button">Retry Same 50</button>
     </div>
-    <p class="resultSub hidden" id="saveNotice" aria-live="polite"></p>
 
     <h3 class="sectionTitle">Weak Topic Tracker</h3>
     <div class="topicGrid" id="topicGrid"></div>
@@ -660,13 +656,12 @@ const letters=['A','B','C','D'];
 const QUESTION_SECONDS=180;
 
 let questions=[],responses=[],current=0,streak=0,bestStreak=0;
-let timeLeft=QUESTION_SECONDS,timerId=null,finished=false,player='';
+let timeLeft=QUESTION_SECONDS,timerId=null,finished=false,player='',timerEnabled=true;
 
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
 function fmt(s){
   return String(s??'').replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g,'<span class="frac"><span class="num">$1</span><span class="den">$2</span></span>');
 }
-function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function answerDisplay(q){
   return q.type==='mcq' ? `${letters[q.answer]}. ${q.options[q.answer]}` : q.answerText;
 }
@@ -715,7 +710,7 @@ function loseStreak(){streak=0;}
 function stopTimer(){if(timerId)clearInterval(timerId);timerId=null;}
 function startTimer(){
   stopTimer();
-  if(responses[current]||$('quizView').classList.contains('hidden'))return;
+  if(!timerEnabled||responses[current]||$('quizView').classList.contains('hidden'))return;
   timerId=setInterval(()=>{
     timeLeft--;
     updateTimerUI();
@@ -724,10 +719,12 @@ function startTimer(){
 }
 function updateTimerUI(){
   const t=Math.max(0,timeLeft),m=Math.floor(t/60),s=String(t%60).padStart(2,'0');
-  $('timerText').textContent=`${m}:${s}`;
+  $('timerText').textContent=timerEnabled?`${m}:${s}`:'Off';
+  $('timerSidePanel').querySelector('.timerLabel').textContent=timerEnabled?'Question Timer':'Timer Off';
+  $('timerSub').textContent=timerEnabled?'Calculation practice pace.':'No time limit for this run.';
   $('streakCount').textContent=streak;
-  const ring=$('timerRing');ring.style.setProperty('--p',Math.max(0,t/QUESTION_SECONDS*100));
-  ring.classList.toggle('warn',t<=60&&t>20);ring.classList.toggle('danger',t<=20);ring.classList.toggle('critical',t<=10);
+  const ring=$('timerRing');ring.style.setProperty('--p',timerEnabled?Math.max(0,t/QUESTION_SECONDS*100):0);
+  ring.classList.toggle('warn',timerEnabled&&t<=60&&t>20);ring.classList.toggle('danger',timerEnabled&&t<=20);ring.classList.toggle('critical',timerEnabled&&t<=10);
 }
 function timeoutCurrent(){
   if(responses[current])return;
@@ -755,7 +752,8 @@ function updateNavigator(){
 
 function startNew(){
   player=$('playerName').value.trim()||'Chemist';
-  questions=shuffle(BANK.map(q=>JSON.parse(JSON.stringify(q))));
+  timerEnabled=$('timerEnabled').checked;
+  questions=BANK.map(q=>JSON.parse(JSON.stringify(q)));
   responses=Array(questions.length).fill(null);current=0;streak=0;bestStreak=0;timeLeft=QUESTION_SECONDS;finished=false;
   $('startView').classList.add('hidden');$('resultsView').classList.add('hidden');$('quizView').classList.remove('hidden');
   $('missedReview').classList.add('hidden');$('answerKey').classList.add('hidden');showQuizSideControls();render();
@@ -871,10 +869,6 @@ function finish(){
   $('weakStat').textContent=weak?weak[0]:'—';
   $('resultMessage').textContent=pct>=90?`${player}, outstanding mastery of these calculations!`:pct>=75?`${player}, strong work — review the missed topics and go again.`:pct>=60?`${player}, good progress — use the topic tracker for targeted revision.`:`${player}, this set is intentionally difficult. Review the explanations, then retry.`;
   buildResultNavigator();buildMissedTopics();buildTopics(stats);buildReview();buildKey();$('reviewBtn').disabled=score===total;
-  const endpoint=getResultEndpoint();
-  if(endpoint){
-    saveResultToSharedAndLocal({silent:true});
-  }
   $('resultsView').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function buildResultNavigator(){
@@ -912,114 +906,6 @@ function buildKey(){
   const body=$('keyBody');body.innerHTML='';
   questions.forEach((q,i)=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${i+1}</td><td>${q.type==='mcq'?'MCQ':'Typed'}</td><td>${esc(q.category)}</td><td><strong>${fmt(answerDisplay(q))}</strong></td><td>${fmt(q.explanation)}</td>`;body.appendChild(tr);});
 }
-
-const RESULT_STORAGE_KEY='aschemistryCandidateResults';
-function getResultEndpoint(){
-  const params=new URLSearchParams(window.location.search);
-  const urlEndpoint=params.get('sheet') || params.get('endpoint') || '';
-  const inputEndpoint=(document.getElementById('resultEndpoint')?.value || '').trim();
-  return (urlEndpoint || inputEndpoint).trim();
-}
-function populateResultEndpointFromUrl(){
-  const params=new URLSearchParams(window.location.search);
-  const endpoint=params.get('sheet') || params.get('endpoint');
-  if(endpoint && document.getElementById('resultEndpoint')){
-    document.getElementById('resultEndpoint').value=endpoint;
-  }
-}
-async function sendResultToEndpoint(record, endpoint){
-  const response=await fetch(endpoint, {
-    method:'POST',
-    mode:'cors',
-    headers:{'Content-Type':'application/json'},
-    body: JSON.stringify({
-      candidate: record.candidate,
-      date: record.date,
-      score: record.score,
-      total: record.total,
-      percentage: record.percentage,
-      bestStreak: record.bestStreak,
-      missedTopics: record.missedTopics,
-      responses: record.responses
-    })
-  });
-  if(!response.ok){
-    throw new Error(`HTTP ${response.status}`);
-  }
-  return response;
-}
-function collectCurrentCandidate(){
-  const record={
-    candidate: (player||'Chemist').trim() || 'Chemist',
-    date: new Date().toISOString(),
-    score: scoreNow(),
-    total: questions.length,
-    percentage: Math.round((scoreNow()/questions.length)*100),
-    bestStreak: bestStreak,
-    missedTopics: Object.entries(categoryStats()).filter(([_,info])=>info.right < info.total).map(([name,info])=>({name, missed: info.total - info.right, total: info.total})),
-    responses: responses.map((r,i)=>({
-      question: i + 1,
-      category: questions[i].category,
-      type: questions[i].type,
-      answered: !!r,
-      correct: !!(r && r.isCorrect),
-      skipped: !!(r && r.skipped),
-      timeout: !!(r && r.timeout),
-      selected: r ? r.selected ?? null : null,
-      userText: r ? r.userText ?? '' : '',
-      key: answerDisplay(questions[i])
-    }))
-  };
-  const existing=JSON.parse(localStorage.getItem(RESULT_STORAGE_KEY) || '[]');
-  existing.push(record);
-  localStorage.setItem(RESULT_STORAGE_KEY, JSON.stringify(existing));
-  return record;
-}
-
-function showSaveNotice(message){
-  const n=$('saveNotice');
-  n.textContent=message;
-  n.classList.remove('hidden');
-  setTimeout(()=>n.classList.add('hidden'), 4000);
-}
-
-async function saveResultToSharedAndLocal({ silent=false }={}){
-  const record=collectCurrentCandidate();
-  const endpoint=getResultEndpoint();
-  if(endpoint){
-    try{
-      await sendResultToEndpoint(record, endpoint);
-      if(!silent){showSaveNotice(`Saved result for ${record.candidate}: ${record.percentage}% and sent to the shared sheet.`);}
-      return;
-    }catch(err){
-      if(!silent){showSaveNotice(`Saved locally for ${record.candidate}: ${record.percentage}%. Shared send failed: ${err.message}`);}
-      return;
-    }
-  }
-  if(!silent){showSaveNotice(`Saved locally for ${record.candidate}: ${record.percentage}%`);}
-}
-
-function downloadCandidateCsv(){
-  const rows=JSON.parse(localStorage.getItem(RESULT_STORAGE_KEY) || '[]');
-  if(!rows.length){showSaveNotice('No candidate results have been collected yet.');return;}
-  const headers=['candidate','date','score','total','percentage','bestStreak'];
-  const csv=[headers.join(',')].concat(rows.map(r=>[
-    `"${String(r.candidate).replace(/"/g,'""')}"`,
-    `"${r.date}"`,
-    r.score,
-    r.total,
-    r.percentage,
-    r.bestStreak
-  ].join(','))).join('\n');
-  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');a.href=url;a.download='candidate-results.csv';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
-  showSaveNotice(`Downloaded ${rows.length} saved result(s).`);
-}
-
-$('saveResultBtn').onclick=()=>saveResultToSharedAndLocal();
-$('downloadCsvBtn').onclick=downloadCandidateCsv;
-populateResultEndpointFromUrl();
 
 $('startBtn').onclick=startNew;$('nextBtn').onclick=next;$('hintBtn').onclick=showHint;$('skipBtn').onclick=skip;
 $('timerSideShow').onclick=()=>setTimerPanel(true);$('timerSideHide').onclick=()=>setTimerPanel(false);
